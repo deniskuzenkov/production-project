@@ -2,6 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import i18next from "eslint-plugin-i18next";
 
 
 export default [
@@ -10,6 +11,7 @@ export default [
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
+    i18next.configs["flat/recommended"],
     {
         rules: {
             "react/jsx-indent": [2, 4],
@@ -25,6 +27,7 @@ export default [
             "import/extensions": "off",
             "import/no-extraneous-dependencies": "off",
             "no-underscore-dangle": "off",
+            "i18next/no-literal-string": ['error', {markupOnly:true}]
         }
     }
 ];

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended"
+    ],
+  "rules": {
+    "selector-class-pattern": "^.*$",
+    "color-no-invalid-hex": true,
+    "block-no-empty": null,
+    "declaration-block-no-duplicate-properties": true
+  },
+  "plugins": [
+    "stylelint-order"
+  ]
+}
